@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHUB using Css Grid</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .wrapper {
+        display: grid;
+        grid-template-rows: 1fr 5fr;
+        background-color: rgb(123, 163, 151);
+        height: 100vh;
+        gap: 3em;
+      }
+      .row1 {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        background-color: rgb(40, 31, 48);
+        color: white;
+      }
+      .row1 > i {
+        align-self: center;
+        padding-left: 20px;
+      }
+      .row1 > span {
+        justify-self: center;
+        align-self: center;
+        font-size: 40px;
+      }
+      .row2 {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 10em;
+        margin-left : 50px;
+        margin-right : 20px;
+      }
+      .col1 {
+        background: rgb(54, 53, 53);
+        border-radius: 20px;
+      }
+      .col2 {
+        display: grid;
+        grid-template-rows: 0.5fr 3fr 3fr;
+        row-gap: 50px;
+      }
+      #block1 {
+        background: rgb(54, 53, 53);
+        border-radius: 20px;
+        color: white;
+        font-weight: bold;
+        padding: 10px;
+        margin: 0px 40px;
+      }
+      #block2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        border-radius: 20px;
+        column-gap: 50px;
+      }
+      #block2 > div {
+        background: rgb(54, 53, 53);
+        border-radius: 20px;
+        margin: 20px 0px;
+      }
+      #block3 {
+        background: rgb(54, 53, 53);
+        border-radius: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="row1">
+        <i class="fa fa-github fa-5x"></i>
+        <span>GITHUB</span>
+      </div>
+      <div class="row2">
+        <div class="col1"></div>
+        <div class="col2">
+          <div class="block" id="block1">Search</div>
+          <div class="block" id="block2">
+            <div class="smallbox"></div>
+            <div class="smallbox" id="smallbox2"></div>
+            <div class="smallbox"></div>
+          </div>
+          <div class="block" id="block3"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
